@@ -33,7 +33,7 @@ const App = () => {
   }, [formData]);
 
   useEffect(() => {
-    fetch("src/export.xlsx")
+    fetch("/export.xlsx")
       .then((response) => response.arrayBuffer())
       .then((buffer) => {
         const workbook = XLSX.read(buffer, { type: "buffer" });
